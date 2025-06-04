@@ -1,0 +1,12 @@
+Flask==2.3.3
+Flask-SocketIO==5.3.6
+Flask-JWT-Extended==4.5.3
+Flask-SQLAlchemy==3.0.5
+Flask-Migrate==4.0.5
+Flask-CORS==4.0.0
+python-socketio==5.9.0
+redis==5.0.1
+bcrypt==4.0.1
+python-dotenv==1.0.0
+gunicorn==21.2.0
+eventlet==0.33.3
