@@ -40,6 +40,8 @@ docker-compose up --build
 # Next Steps
 Tests are currently ongoing for this project. Once complete, they will be added to the project.
 
+CI/CD workflow will be added when tests are complete and production build is ready.
+
 Feel free to reach out for collaborations and contributions to this project.
 
 # License
