@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
@@ -16,6 +16,12 @@ redis_client = None
 def create_app(config_name='default'):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
+    
+    # Debug middleware to log raw request data
+    @app.before_request
+    def log_request_info():
+        print(f"Request Headers: {dict(request.headers)}")
+        print(f"Request Data: {request.get_data(as_text=True)}")
     
     # Initialize extensions
     db.init_app(app)
